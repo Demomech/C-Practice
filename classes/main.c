@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int choice;
+    char *type;
+
+    printf("What type of warrior are you? Choose a number...\n (1) Fighter\n (2) Mage\n (3) Thief\n");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        type = "Fighter";
+    } else if (choice == 2) {
+        type = "Mage";
+    } else if (choice == 3) {
+        type = "Thief";
+    } else {
+        type = "Unknown";
+    }
+
+    printf("\nYou are Joe, a %s in the kingdom of Larion!\n", type);
+
+    return 0;
+}
