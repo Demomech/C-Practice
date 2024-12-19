@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char name[25];
+    char place[25];
+    char *type;
+    int choice;
+    int health;
+
+
+    printf("Welcome to the game!\n");
+    printf("What is your name?\n");
+    scanf("%s", name);
+    printf("Tell us, %s, what kingdom do you hail from?\n", name);
+    scanf("%s", place);
+    printf("You are %s from the kingdom of %s!\n", name, place);
+    printf("What kind of warrior are you? \n (1) - Fighter \n (2) - Mage \n (3) - Thief");
+    scanf("%d", &choice);
+
+    if (choice==1) {type="Fighter"; health=100;}
+    else if (choice==2) {type="Mage"; health=50;}
+    else if (choice==3) {type="Thief"; health=75;}
+    else {type="Unknown";}
+
+    printf("You are truly a mighty %s! \n", type);
+    printf("You have %d health.", health);
+
+    return 0;
+}
